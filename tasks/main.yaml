@@ -54,7 +54,7 @@
 
 - name: install fluentd plugins
   become: true
-  command: "{{ fluentd_bin_dir }}/fluent-gem install -N fluent-plugin-{{ item }}"
+  command: "{{ fluentd_bin_gem_cmd }} install -N fluent-plugin-{{ item }}"
   with_items: "{{fluentd_plugins}}"
   when: fluentd_plugins is not none and fluentd_plugins|length > 0
 

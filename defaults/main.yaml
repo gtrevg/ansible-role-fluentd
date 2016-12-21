@@ -6,6 +6,8 @@ fluentd_install_url:  http://toolbelt.treasuredata.com/sh
 
 # Directories
 fluentd_bin_dir:  /opt/td-agent/embedded/bin
+fluentd_bin_agent_cmd: "{{ fluentd_bin_dir }}/fluentd"
+fluentd_bin_gem_cmd: "{{ fluentd_bin_dir }}/fluent-gem"
 fluentd_spool_dir:  /var/spool/td-agent
 fluentd_conf_dir:   /etc/td-agent
 fluentd_conf_file: "{{ fluentd_conf_dir }}/td-agent.conf"
